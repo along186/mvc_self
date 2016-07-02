@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+{include file='header.html'}
+{$sessionname}
+<table border="1">
+<tr>
+<td>用户ID</td>
+<td>用户姓名</td>
+<td>用户邮箱</td>
+<td>用户年龄</td>
+</tr>
+{foreach from=$info item=vi key=k }
+{if ($vi.u_age == 28) }
+<tr>
+<td>{$vi.u_id}</td>
+<td>{$vi.u_name}</td>
+<td>{$vi.u_email}</td>
+<td>{$vi.u_age}</td>
+</tr>
+{elseif ($vi.u_age == 27)}
+<tr>
+<td>{$k}{$vi.u_id}老婆</td>
+<td>{$vi.u_name}老婆</td>
+<td>{$vi.u_email}老婆</td>
+<td>{$vi.u_age}老婆</td>
+</tr>
+{else}
+<tr>
+<td>{$k}{$vi.u_id}宝宝</td>
+<td>{$vi.u_name}宝宝</td>
+<td>{$vi.u_email}宝宝</td>
+<td>{$vi.u_age}宝宝</td>
+</tr>
+{/if}
+{/foreach}
+</table>
+{include file='footer.html'}
+</body>
+</html>
