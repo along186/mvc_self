@@ -1,1 +1,1 @@
-这是一个我自己写的mvc框架，主要是为了自己方便，自己写着玩的。
+This is an mvc framework that I wrote myself, mainly for my own convenience and for fun.
